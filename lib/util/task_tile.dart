@@ -2,23 +2,19 @@
 
 import 'package:flutter/material.dart';
 
-class CategoryTile extends StatelessWidget {
+class TaskTile extends StatelessWidget {
   
   // final String categoryName;
   // final Color categoryColor;
   // final Icon categoryIcon;
-  // final int tasksTotal;
-  // final int tasksDone;
-  // final bool isOpen;
+  // final bool isDone;
 
-  const CategoryTile({
+  const TaskTile({
     super.key,
     // required this.categoryName,
     // required this.categoryColor,
     // required this.categoryIcon,
-    // required this.tasksTotal,
-    // required this.tasksDone,
-    // required this.isOpen,
+    // required this.isDone,
     });
 
   @override

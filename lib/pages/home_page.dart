@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:goaly/util/category_tile.dart';
+import 'package:goaly/util/task_tile.dart';
 import 'package:goaly/data/database.dart';
-import 'package:goaly/util/category_wizard.dart';
+import 'package:goaly/util/task_wizard.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,12 +17,17 @@ class _HomePageState extends State<HomePage> {
   CategoryDatabase db = CategoryDatabase();
   final _controller = TextEditingController();
 
+  void saveNewTask() {
+    setState(() {
+      db.taskTiles.add([_controller.text, false]);
+    });
+  }
   // TO DO: Create and Cancel functions
-  void createNewCategory() {
+  void createNewTask() {
     showDialog(
       context: context,
       builder: (context) {
-        return CategoryWizard(
+        return TaskWizard(
           controller: _controller,
           onCreate: () {}, 
           onCancel: () {}
@@ -45,13 +50,13 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Color.fromARGB(255, 30, 30, 30),
         actions: <Widget>[
 
-          // ADD_CATEGORY BUTTON
+          // ADD_TASK BUTTON
           IconButton(
             icon: Icon(Icons.add_box_outlined),
             color: Colors.white,
-            tooltip: "Add Category",
+            tooltip: "Add Task",
             onPressed: (){
-              createNewCategory();
+              createNewTask();
             },
           ),
 
@@ -67,9 +72,9 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: ListView.builder(
-        itemCount: db.categoryTiles.length,
+        itemCount: db.taskTiles.length,
         itemBuilder: (context, index) {
-          return CategoryTile(
+          return TaskTile(
 
           );
         }
