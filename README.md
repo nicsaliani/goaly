@@ -1,16 +1,5 @@
 # goaly
 
-A new Flutter project.
+**goaly** is a minimalistic mobile application designed for creating, customizing, and organizing your goals. Sort goals into Categories, which are containers that can be named, colored, and branded to help make your goals easier to track.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+(NOTE: This application is a WIP. Not all features are currently functional or present.)
