@@ -1,0 +1,5 @@
+class CategoryDatabase {
+
+  List categoryTiles = [];
+  
+}
